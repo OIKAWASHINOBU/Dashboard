@@ -52,3 +52,32 @@ Search Console の「**ページにリダイレクトがあります**」通知�
 組み合わせは実環境でしか検証できないため、**必ずステージング環境か、
 子テーマ＋バックアップを取った上で**適用してください。
 既存SEOプラグインとの二重出力を避けるガード（`SITE_SEO_ENABLE`）を入れてあります。
+
+---
+
+## 検証状況
+
+`wordpress/functions-seo.php` は **実際に実行して出力を検証済み** です。
+
+```bash
+cd seo/wordpress/tests && python3 verify.py
+```
+
+`tests/harness.php` が WordPress の関数を最小限スタブして `functions-seo.php` を
+実行し、`verify.py` がその出力を構造レベルで検証します（WordPress本体は不要）。
+
+検証している内容（20項目・全通過）：
+
+| シナリオ | 確認内容 |
+|---|---|
+| トップページ | Organization + WebSite のみ出力／SearchAction あり／canonicalが1つだけ |
+| 投稿記事 | BlogPosting + BreadcrumbList／著者がPerson型／公開日と更新日が別／パンくず3階層の連番／canonicalが記事の最終URL |
+| FAQ固定ページ | FAQPage が Question/Answer 型で出力 |
+| Yoast稼働中 | **一切出力しない**（canonical・構造化データの二重出力を防止） |
+
+`tools/audit-console.js` も Chromium 上で実動作を確認済みです
+（301リンク・404リンク・短縮URL・実体のないサイトマップ・プラグインslugの検出）。
+
+> ⚠️ 検証したのは「コードが仕様どおり動くこと」までです。
+> **o-snb.com の実サイトに適用した状態は未確認**であり、テーマとの相性は
+> ステージング環境での確認が必要です。
