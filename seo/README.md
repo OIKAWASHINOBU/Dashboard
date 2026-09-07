@@ -15,7 +15,8 @@ Search Console の「**ページにリダイレクトがあります**」通知�
 | 手順 | ファイル | 内容 | 所要 |
 |---|---|---|---|
 | 0 | [`tools/audit-console.js`](tools/audit-console.js) | **★まずこれ★** ブラウザに貼るだけで自動診断。結果をチャットに戻せば実物ベースの指摘ができます | 2分 |
-| 0b | [`00-collect-data.md`](00-collect-data.md) | 自動診断が使えない場合の、手作業でのデータ収集手順 | 10分 |
+| 0b | [`tools/claude-in-chrome-prompt.md`](tools/claude-in-chrome-prompt.md) | Claude in Chrome（Chrome拡張）に同じ調査をさせるためのプロンプト | 5分 |
+| 0c | [`00-collect-data.md`](00-collect-data.md) | 自動診断が使えない場合の、手作業でのデータ収集手順 | 10分 |
 | 1 | [`01-redirect-diagnosis.md`](01-redirect-diagnosis.md) | 今回の警告が「直すべきもの」か「放置してよいもの」かを切り分ける | 30分 |
 | 2 | [`wordpress/htaccess-canonical.txt`](wordpress/htaccess-canonical.txt) | URLの正規化（http/https・www有無・重複解消） | 15分 |
 | 3 | [`wordpress/robots.txt`](wordpress/robots.txt) | 検索クローラ＋AIクローラの通行許可 | 5分 |
