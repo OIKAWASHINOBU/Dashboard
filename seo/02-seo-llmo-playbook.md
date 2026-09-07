@@ -174,8 +174,8 @@ LLMOには順位表がありません。**実際にAIに質問して確認する
 ## 実装後の必須チェック
 
 - [ ] [リッチリザルトテスト](https://search.google.com/test/rich-results) で構造化データにエラー・警告がない
-- [ ] `https://example.co.jp/robots.txt` がブラウザで開ける
-- [ ] `https://example.co.jp/llms.txt` がブラウザで開ける
-- [ ] `https://example.co.jp/sitemap.xml` に転送されるURLが載っていない
+- [ ] `https://o-snb.com/robots.txt` がブラウザで開ける
+- [ ] `https://o-snb.com/llms.txt` がブラウザで開ける
+- [ ] `https://o-snb.com/sitemap.xml` に転送されるURLが載っていない
 - [ ] 主要ページのソースを表示し、`<link rel="canonical">` が**1つだけ**で、最終URLを指している
 - [ ] トップページが**転送0回**で表示される

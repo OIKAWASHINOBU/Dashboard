@@ -67,9 +67,9 @@ CSVがあれば、下の判定表に機械的に当てはめられます。
 **www の有無が揃っている** ことを確認してください。
 
 ```
-✅ 良い例   https://example.co.jp
-❌ 悪い例   http://example.co.jp        （httpのまま）
-❌ 悪い例   https://www.example.co.jp/  （もう一方が www なし・スラッシュ有）
+✅ 良い例   https://o-snb.com
+❌ 悪い例   http://o-snb.com        （httpのまま）
+❌ 悪い例   https://www.o-snb.com/  （もう一方が www なし・スラッシュ有）
 ```
 
 ### 3-2. SSL化プラグインと .htaccess の重複
@@ -111,7 +111,7 @@ SEOプラグインの設定で、**サイトマップに含めない**ものを�
 | 著者アーカイブ（1人運営の場合） | トップと重複 |
 | 検索結果ページ・404 | インデックス不要 |
 
-その後 `https://example.co.jp/sitemap.xml`（プラグインによりファイル名は異なる）を
+その後 `https://o-snb.com/sitemap.xml`（プラグインによりファイル名は異なる）を
 ブラウザで開き、**転送される古いURLが載っていないか** 目視確認してください。
 
 ### 4-2. 内部リンクの一括置換
@@ -122,8 +122,8 @@ SEOプラグインの設定で、**サイトマップに含めない**ものを�
 置換対象の代表例：
 
 ```
-http://example.co.jp        →  https://example.co.jp
-https://www.example.co.jp   →  https://example.co.jp
+http://o-snb.com        →  https://o-snb.com
+https://www.o-snb.com   →  https://o-snb.com
 https://x.gd/xxxxx          →  （本来の遷移先URL）
 ```
 
@@ -146,7 +146,7 @@ URLを入れて、**200 が1回で返る**ことを見ます。
 
 ```bash
 curl -sSI -L -o /dev/null -w '%{num_redirects} 回転送 → 最終 %{http_code} %{url_effective}\n' \
-  https://example.co.jp/
+  https://o-snb.com/
 ```
 
 - `0 回転送 → 最終 200` … 理想

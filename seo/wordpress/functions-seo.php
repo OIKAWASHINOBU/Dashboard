@@ -33,13 +33,13 @@ function site_seo_config() {
 		'alternate'     => 'サンプル',
 
 		// 正規URL（末尾スラッシュなし・www有無は .htaccess と揃える）
-		'url'           => 'https://example.co.jp',
+		'url'           => 'https://o-snb.com',
 
 		// ロゴ画像の絶対URL（推奨：横長・112px以上・PNG/JPG）
-		'logo'          => 'https://example.co.jp/wp-content/uploads/logo.png',
+		'logo'          => 'https://o-snb.com/wp-content/uploads/logo.png',
 
 		// SNS等でシェアされた時の既定画像（推奨 1200x630px）
-		'og_image'      => 'https://example.co.jp/wp-content/uploads/ogp.jpg',
+		'og_image'      => 'https://o-snb.com/wp-content/uploads/ogp.jpg',
 
 		// 事業内容を1〜2文で。曖昧語を使わず、対象者と提供価値を断定形で
 		'description'   => '中小企業の経営者向けに、実践型マーケティング講座と伴走支援を提供するコンサルティング会社です。',

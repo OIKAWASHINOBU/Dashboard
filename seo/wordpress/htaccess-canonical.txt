@@ -13,8 +13,6 @@
 # ★二重リダイレクト防止★
 #   Really Simple SSL 等のSSL化プラグインを使っている場合は、
 #   プラグイン側のリダイレクト機能をオフにしてから使ってください。
-#
-# ★置換★ example.co.jp を自社の正規ドメインに置き換えてください。
 # ============================================================
 
 <IfModule mod_rewrite.c>
@@ -24,20 +22,20 @@ RewriteEngine On
 # 【1】http/www の正規化 —— 必ず「1回の転送」で最終URLへ
 # ------------------------------------------------------------
 # 条件を [OR] で並べ、転送先を1つに固定することで、
-#   http://www.example.co.jp/page  →  https://example.co.jp/page
+#   http://www.o-snb.com/page  →  https://o-snb.com/page
 # が **1段** で完了します（2段のチェーンを作らない）。
 #
 # ▼ パターンA：「www なし」に統一する場合（この3行を使う）
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://example.co.jp%{REQUEST_URI} [R=301,L,NE]
+RewriteRule ^ https://o-snb.com%{REQUEST_URI} [R=301,L,NE]
 
 # ▼ パターンB：「www あり」に統一する場合
 #    上の3行をコメントアウトし、下の3行を有効にしてください。
 #
 # RewriteCond %{HTTPS} !=on [OR]
 # RewriteCond %{HTTP_HOST} !^www\. [NC]
-# RewriteRule ^ https://www.example.co.jp%{REQUEST_URI} [R=301,L,NE]
+# RewriteRule ^ https://www.o-snb.com%{REQUEST_URI} [R=301,L,NE]
 
 # ------------------------------------------------------------
 # 【1-補】%{HTTPS} が効かないサーバーの場合
@@ -65,11 +63,11 @@ RewriteRule ^(.*)index\.(php|html?)$ /$1 [R=301,L,NE]
 # リニューアル等でURLが変わったページは、ここに1行ずつ書きます。
 # ★必ず「最終URL」へ直接転送すること★（別の転送先を経由させない）
 #
-#   Redirect 301 /旧パス  https://example.co.jp/新パス
+#   Redirect 301 /旧パス  https://o-snb.com/新パス
 #
 # 例：
-# Redirect 301 /old-service  https://example.co.jp/service/
-# Redirect 301 /blog/2023/campaign  https://example.co.jp/seminar/
+# Redirect 301 /old-service  https://o-snb.com/service/
+# Redirect 301 /blog/2023/campaign  https://o-snb.com/seminar/
 # ============================================================
 
 

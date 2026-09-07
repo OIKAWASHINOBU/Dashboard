@@ -14,6 +14,7 @@ Search Console の「**ページにリダイレクトがあります**」通知�
 
 | 手順 | ファイル | 内容 | 所要 |
 |---|---|---|---|
+| 0 | [`00-collect-data.md`](00-collect-data.md) | 現状データの集め方（これを貼れば実物ベースで診断できます） | 10分 |
 | 1 | [`01-redirect-diagnosis.md`](01-redirect-diagnosis.md) | 今回の警告が「直すべきもの」か「放置してよいもの」かを切り分ける | 30分 |
 | 2 | [`wordpress/htaccess-canonical.txt`](wordpress/htaccess-canonical.txt) | URLの正規化（http/https・www有無・重複解消） | 15分 |
 | 3 | [`wordpress/robots.txt`](wordpress/robots.txt) | 検索クローラ＋AIクローラの通行許可 | 5分 |
@@ -25,16 +26,21 @@ Search Console の「**ページにリダイレクトがあります**」通知�
 
 ## 最初にやること（共通の前提）
 
-すべてのファイルで、次の値を自社のものに置き換えてください。
+ドメインは **`https://o-snb.com`** で全ファイル設定済みです。
+残る置換は次の1点だけです。
 
 ```
-https://example.co.jp   →  自社サイトの正規URL（https、www有無を決めた方）
-株式会社サンプル         →  正式な会社名
+株式会社サンプル  →  正式な会社名（登記名）
 ```
 
-**正規URLの決め方**：`www` を付けるか付けないかは、どちらでも構いません。
-重要なのは「**どちらか一方に決めて、サイト全体で統一する**」ことです。
-すでに検索結果に出ている方に合わせるのが安全です。
+**未確定：www の有無**
+`www` あり／なしはどちらでも構いませんが、「**どちらか一方に決めて全体で統一する**」
+ことが必須です。現状 `https://o-snb.com`（www なし）を正としてありますが、
+ブラウザで `https://o-snb.com` を開いてアドレスバーに `www.` が付くようなら、
+`www あり` が正です。その場合は次の2ファイルをパターンB側に切り替えてください。
+
+- `wordpress/htaccess-canonical.txt` … 【1】のパターンBを有効化
+- `wordpress/functions-seo.php` … `'url'` を `https://www.o-snb.com` に
 
 ---
 

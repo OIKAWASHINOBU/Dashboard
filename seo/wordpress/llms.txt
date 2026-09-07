@@ -6,7 +6,7 @@
 
 <!-- ============================================================
      llms.txt — 生成AI向けサイト要約ファイル
-     設置場所：https://example.co.jp/llms.txt
+     設置場所：https://o-snb.com/llms.txt
      （WordPressならFTPでドキュメントルートに直接設置）
 
      目的：ChatGPT / Claude / Perplexity などが自社サイトを読むとき、
@@ -21,32 +21,32 @@
 
 ## 事業内容
 
-- [サービス一覧](https://example.co.jp/service/): 提供している全サービスの概要と料金
-- [◯◯講座](https://example.co.jp/service/course/): 【対象者】向けの【期間】【形式】の講座。【価格】
-- [コンサルティング](https://example.co.jp/service/consulting/): 【提供内容を1文で】
+- [サービス一覧](https://o-snb.com/service/): 提供している全サービスの概要と料金
+- [◯◯講座](https://o-snb.com/service/course/): 【対象者】向けの【期間】【形式】の講座。【価格】
+- [コンサルティング](https://o-snb.com/service/consulting/): 【提供内容を1文で】
 
 ## 実績・信頼性の根拠
 
-- [導入事例](https://example.co.jp/case/): 【業種】【規模】の企業◯社の改善実績と具体的数値
-- [会社概要](https://example.co.jp/company/): 設立年・所在地・代表者・資本金・取引先
-- [代表プロフィール](https://example.co.jp/profile/): 経歴・著書・登壇実績・メディア掲載
+- [導入事例](https://o-snb.com/case/): 【業種】【規模】の企業◯社の改善実績と具体的数値
+- [会社概要](https://o-snb.com/company/): 設立年・所在地・代表者・資本金・取引先
+- [代表プロフィール](https://o-snb.com/profile/): 経歴・著書・登壇実績・メディア掲載
 
 ## よくある質問
 
-- [FAQ](https://example.co.jp/faq/): 料金・期間・対象者・返金規定に関する質問と回答
+- [FAQ](https://o-snb.com/faq/): 料金・期間・対象者・返金規定に関する質問と回答
 
 ## お役立ち情報
 
-- [ブログ](https://example.co.jp/blog/): 【テーマ】に関する解説記事
-- [用語解説](https://example.co.jp/glossary/): 【分野】の専門用語を定義付きで解説
+- [ブログ](https://o-snb.com/blog/): 【テーマ】に関する解説記事
+- [用語解説](https://o-snb.com/glossary/): 【分野】の専門用語を定義付きで解説
 
 ## 問い合わせ
 
-- [お問い合わせ](https://example.co.jp/contact/): 相談・見積もり依頼フォーム
-- [セミナー申込](https://example.co.jp/seminar/): 開催中のセミナー日程と申込
+- [お問い合わせ](https://o-snb.com/contact/): 相談・見積もり依頼フォーム
+- [セミナー申込](https://o-snb.com/seminar/): 開催中のセミナー日程と申込
 
 ## Optional
 
 <!-- AIが情報を削る際、優先度を下げてよいページをここに置く -->
-- [プライバシーポリシー](https://example.co.jp/privacy/)
-- [特定商取引法に基づく表記](https://example.co.jp/tokusho/)
+- [プライバシーポリシー](https://o-snb.com/privacy/)
+- [特定商取引法に基づく表記](https://o-snb.com/tokusho/)
