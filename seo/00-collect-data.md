@@ -107,3 +107,21 @@ Claude Code の**環境設定でネットワークポリシーを変更**する�
 （詳細：https://code.claude.com/docs/en/claude-code-on-the-web ）
 
 ただし上の①〜⑤を貼っていただく方が早いので、まずはそちらを推奨します。
+
+---
+
+## ★最速の方法：自動診断スクリプト★
+
+上の①〜⑤を手作業で集める代わりに、
+[`tools/audit-console.js`](tools/audit-console.js) をブラウザのコンソールに
+貼り付ければ、①〜③と⑤の内容が**2分で自動収集**されます。
+
+1. Chrome で `https://o-snb.com` を開く
+2. `F12`（Mac: `⌘ + Option + I`）→「Console / コンソール」タブ
+3. **初回だけ** 入力欄に `allow pasting` と打って Enter
+4. スクリプトの中身を全部貼り付けて Enter
+5. 数十秒待つと結果が出て、自動でクリップボードにコピーされます
+6. チャットに貼り付け
+
+読み取り専用でサイトは一切変更しません。
+Search Console のCSV（上の④）だけは手動で取得してください。
