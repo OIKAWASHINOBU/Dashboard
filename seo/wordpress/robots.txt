@@ -1,0 +1,99 @@
+# ============================================================
+# robots.txt
+# 設置場所：ドメイン直下（https://example.co.jp/robots.txt で開ける場所）
+#
+# ★注意★ WordPress は物理ファイルが無いと仮想robots.txtを自動生成します。
+#   このファイルをFTPでドキュメントルートに置くと、そちらが優先されます。
+#   （SEOプラグインの robots.txt 編集機能を使う場合は、その画面に貼っても可）
+#
+# ★置換★ example.co.jp を自社ドメインに置き換えてください。
+# ============================================================
+
+# ------------------------------------------------------------
+# 検索エンジン（全般）
+# ------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# WordPress の管理・内部用パス（インデックス不要）
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?replytocom=
+Disallow: /trackback/
+Disallow: /*/feed/
+
+# CSS・JS・画像は必ず許可（ブロックするとモバイル評価とCore Web Vitalsが下がる）
+Allow: /wp-content/uploads/
+Allow: /wp-includes/*.js
+Allow: /wp-content/*.css
+Allow: /wp-content/*.js
+
+# ------------------------------------------------------------
+# 生成AIクローラ（LLMO対策：ここを許可しないとAIに引用されません）
+# ------------------------------------------------------------
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Claude / Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google の AI 機能（AI Overviews / Gemini のグラウンディング）
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot（Bingbot 経由。Bingbot は User-agent: * の対象）
+User-agent: msnbot-media
+Allow: /
+
+# Common Crawl（多くのAIモデルの学習元データセット）
+User-agent: CCBot
+Allow: /
+
+# ------------------------------------------------------------
+# サイトマップ（★必ず自社URLに置換★）
+# ------------------------------------------------------------
+Sitemap: https://example.co.jp/sitemap.xml
+
+# ============================================================
+# 【補足】AIクローラを許可するかの判断
+# ------------------------------------------------------------
+# 許可する  → ChatGPT・Claude・Perplexity・AI Overviews に
+#             自社情報が引用される可能性が上がる（＝LLMO）
+# 拒否する  → 学習データに使われないが、AI経由の流入もゼロになる
+#
+# 「必要な人に見つけてもらう」ことが目的であれば、許可が正解です。
+# 有料コンテンツや会員限定ページだけを Disallow で個別に守ってください。
+#
+# 例：会員ページだけAIに読ませない場合
+# User-agent: GPTBot
+# Disallow: /members/
+# ============================================================
